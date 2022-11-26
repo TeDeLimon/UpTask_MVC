@@ -68,6 +68,13 @@ class ActiveRecord {
         return array_shift( $resultado ) ;
     }
 
+    //Busqueda Where con Columna que retorna múltiples elementos
+    public static function belongsTo($columna, $valor) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE ${columna} = '${valor}'";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     // SQL para Consultas Avanzadas.
     public static function SQL($consulta) {
         $query = $consulta;
@@ -81,11 +88,11 @@ class ActiveRecord {
         $atributos = $this->sanitizarAtributos();
 
         // Insertar en la base de datos
-        $query = " INSERT INTO " . static::$tabla . " ( ";
-        $query .= join(', ', array_keys($atributos));
-        $query .= " ) VALUES (' "; 
-        $query .= join("', '", array_values($atributos));
-        $query .= " ') ";
+        $query = " INSERT INTO " . static::$tabla . " (";
+        $query .= join(',', array_keys($atributos));
+        $query .= " ) VALUES ('"; 
+        $query .= join("','", array_values($atributos));
+        $query .= "')";
 
         // Resultado de la consulta
         $resultado = self::$db->query($query);
