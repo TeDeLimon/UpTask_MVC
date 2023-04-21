@@ -3,7 +3,7 @@
         'name' => 'juandelatorre/up-task_mvc',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'fea94a952e3169c18da44abc047eb5771d92e96f',
+        'reference' => '9d9e038951893afd4ec9625da627458309f72a7e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'juandelatorre/up-task_mvc' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'fea94a952e3169c18da44abc047eb5771d92e96f',
+            'reference' => '9d9e038951893afd4ec9625da627458309f72a7e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
